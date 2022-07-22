@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\TransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Route::get('/', function () {
 
 Route::get('search',[SearchController::class,'index']);
 Route::get('autocomplete',[SearchController::class,'autocomplete'])->name('autocomplete');
+//Route::get('import_csv',[TransactionController::class,'index'])->name('import_csv');
+
+Route::resource('import_csv',TransactionController::class);
