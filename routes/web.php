@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TransactionController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,9 @@ Route::get('autocomplete',[SearchController::class,'autocomplete'])->name('autoc
 //Route::get('import_csv',[TransactionController::class,'index'])->name('import_csv');
 
 Route::resource('import_csv',TransactionController::class);
+
+Auth::routes();
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
