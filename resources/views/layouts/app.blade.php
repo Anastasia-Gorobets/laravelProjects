@@ -22,6 +22,7 @@
     @yield('includes')
 
 </head>
+
 <body>
 
 <div id="app">
