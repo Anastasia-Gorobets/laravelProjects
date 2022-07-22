@@ -14,6 +14,7 @@ class FillTransactionFromCsv
     public function __construct($path)
     {
         $this->path = $path;
+
     }
 
     public function importFile()

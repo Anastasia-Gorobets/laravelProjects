@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Storage;
 
 class TransactionController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('verified');
+    }
+
     public function index ()
     {
         return view('import_csv');

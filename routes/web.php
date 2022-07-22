@@ -27,8 +27,6 @@ Route::get('autocomplete',[SearchController::class,'autocomplete'])->name('autoc
 
 Route::resource('import_csv',TransactionController::class);
 
-Auth::routes();
-
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

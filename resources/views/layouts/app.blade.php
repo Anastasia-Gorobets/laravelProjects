@@ -52,9 +52,11 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{route('import_csv.index')}}">{{__('Import csv')}}</a>
-                            </li>
+                            @if(Auth::user()->hasVerifiedEmail())
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('import_csv.index')}}">{{__('Import csv')}}</a>
+                                </li>
+                            @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
